@@ -3,53 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pragyan Pandey</title>
-
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
-        background-color: rgb(186, 235, 245);
-      }
-      .container {
-        width: 800px;
-        margin: 100px auto;
-        text-align: center;
-        padding: 10px;
-      }
-      h1 {
-        color: #333;
-      }
-      .btn {
-        display: inline-block;
-        padding: 10px 20px;
-        margin: 10px;
-        border-radius: 5px;
-        background-color: #007bff;
-        color: #fff;
-        text-decoration: none;
-        transition: background-color 0.3s;
-      }
-      .btn:hover {
-        background-color: #0056b3;
-      }
-      img{
-        width: 200px;
-        padding: 10px;
-        border-radius: 40rem;
-      }
-    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
-    <div class="container">
-      <img src="images/pragyan1.jpg" alt="sorry!!" />
-      <h1>Welcome to my Website</h1>
-      <h3>Its me Pragyan Pandey</h3>
-      <p>Please sign in or sign up first</p>
-      <a href="signin/" class="btn">Sign In</a>
-      <a href="signup/" class="btn">Sign Up</a>
-    </div>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="home">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Discover my world of creativity and professional works.</p>
+    </section>
+    <section id="about">
+      <h2>About Me</h2>
+      <img src="/new/images/pragyan1.jpg" alt="Profile Picture" />
+      <p>
+        I am Pragyan Pandey, a 22-year-old pursuing my second year of studies in
+        computer engineering at Acme Engineering College.
+      </p>
+      <p>
+        I'm a passionate designer and developer creating web experiences for the
+        global audience. Born on February 10, 2002, my passion for technology
+        has led me to delve into the dynamic field of computer engineering.
+        Currently immersed in the intricacies of my bachelor's degree, I am
+        dedicated to expanding my knowledge and skills in areas such as
+        programming, software development, and system architecture. As a student
+        at Acme Engineering College, I actively engage with the diverse and
+        challenging curriculum, fostering a deep understanding of the
+        ever-evolving world of technology. Beyond academics, I thrive on
+        collaborative projects, seeking opportunities to apply theoretical
+        knowledge in practical scenarios. Motivated by a desire to contribute to
+        the future of technology, I am excited to explore innovative solutions
+        and make a meaningful impact in the realm of computer engineering.
+      </p>
+    </section>
+    <section id="portfolio">
+      <h2>My Work</h2>
+      <div class="portfolio-item">
+        <img src="/new/images/OIP.jpeg" alt="Project 1" />
+        <p>Project 1: A fully functional signin page</p>
+        <img src="/new/images/OIP.jpeg" alt="Project 1" />
+        <p>Project 1: A fully functional signin page</p>
+      </div>
+      <div class="portfolio-item">
+        
+      </div>
+      <!-- Add more portfolio items here -->
+    </section>
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" />
+        <input type="email" placeholder="Your Email" />
+        <input type="text" placeholder="Your Message" />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+    <footer>
+      <p>© 2024 Pragyan Pandey</p>
+      <p>Social media</p>
+      <a href="https://www.facebook.com/pragyan.pandey.750" target="_blank" rel="noopener" class="fa fa-facebook">facebook</a><br>
+      <a href="https://twitter.com/home" target="_blank" rel="noopener" class="fa fa-twitter">twitter</a>
+    </footer>
   </body>
 </html>
