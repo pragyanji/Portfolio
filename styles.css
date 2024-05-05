@@ -146,3 +146,20 @@ img{
     background: #55ACEE;
     color: white;
   }
+
+  .img_home{
+    border-radius: 10px;
+    height: 300px;
+    width: 1100px;
+    padding: 2px;
+    border-radius: 15pt;
+    animation-duration: 1s;
+  }
+  .container{
+    height: 300px;
+    width: 1100px;
+    border-radius: 15px;
+    margin: auto;
+    background-color: #7ca7b4bb;
+    animation-duration: 1s;
+  }
