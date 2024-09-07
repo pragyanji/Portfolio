@@ -1,109 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pragyan Pandey</title>
     <link rel="stylesheet" href="styles.css" />
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet"
     />
-    <style>
-      h4{
-        color: white;
-      }
-    </style>
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-   
+
     <section id="home">
-      <div class="container">
-        <!-- <img class="img_home" src="https://source.unsplash.com/1000x500/?portfolio-background" alt="" /> -->
-        <img class="img_home" src="/images/home_img.png" alt="" />
-
-      </div>
-      <p>
-        <h4>Welcome to my portfolio! Here you will find a showcase of my latest
-        projects, insights into my creative process, and a glimpse into the
-        world of web development. Feel free to explore and get in touch if you
-        have any questions or collaboration opportunities.I'm excited to share
-        my journey with you and inspire others to embark on their own creative
-        adventures. Let's innovate, collaborate, and make an impact together!</h4>
-      </p>
+        <div class="intro">
+            <h1>Hi, I'm <span>Pragyan Pandey</span></h1>
+            <p>A passionate Web Developer & Designer</p><br>
+            <a href="#portfolio" class="btn">View My Work</a>
+        </div>
+        <div class="profile-pic">
+            <img src="/images/pragyan1.jpg" alt="Profile Picture" />
+        </div>
     </section>
+
     <section id="about">
-      <h2>About Me</h2>
-      <img src="/images/pragyan1.jpg" alt="Profile Picture" />
-      <p>
-        I am Pragyan Pandey, a 22-year-old pursuing my second year of studies in
-        computer engineering at Acme Engineering College.
-      </p>
-      <p>
-        I'm a passionate designer and developer creating web experiences for the
-        global audience. Born on February 10, 2002, my passion for technology
-        has led me to delve into the dynamic field of computer engineering.
-        Currently immersed in the intricacies of my bachelor's degree, I am
-        dedicated to expanding my knowledge and skills in areas such as
-        programming, software development, and system architecture. As a student
-        at Acme Engineering College, I actively engage with the diverse and
-        challenging curriculum, fostering a deep understanding of the
-        ever-evolving world of technology. Beyond academics, I thrive on
-        collaborative projects, seeking opportunities to apply theoretical
-        knowledge in practical scenarios. Motivated by a desire to contribute to
-        the future of technology, I am excited to explore innovative solutions
-        and make a meaningful impact in the realm of computer engineering.
-      </p>
+        <h2>About Me</h2>
+        <p>
+            I am a highly motivated web developer with a passion for building user-friendly,
+            responsive websites. I thrive in fast-paced environments and am constantly looking
+            to improve my skills and knowledge in front-end and back-end technologies.
+        </p>
     </section>
-    <section id="portfolio">
-      <h2>My Work</h2>
-      <div class="portfolio-item">
-        <img src="/new/images/OIP.jpeg" alt="Project 1" />
-        <p>Project 1: A fully functional signin page</p>
-        <img src="/new/images/OIP.jpeg" alt="Project 1" />
-        <p>Project 1: A fully functional signin page</p>
-      </div>
-      <div class="portfolio-item"></div>
-      <!-- Add more portfolio items here -->
-    </section>
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="73adfcfd-a13b-4fcf-bd64-a6c6d380c000">
 
-        <input type="text" name = "name" placeholder="Your Name" />
-        <input type="email" name = "email" placeholder="Your Email" />
-        <input type="text" name = "message" placeholder="Your Message" />
-        <button type="submit">Send</button>
-      </form>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <h3>HTML5</h3>
+                <div class="progress-bar"><span style="width: 90%"></span></div>
+            </div>
+            <div class="skill">
+                <h3>CSS3</h3>
+                <div class="progress-bar"><span style="width: 80%"></span></div>
+            </div>
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <div class="progress-bar"><span style="width: 20%"></span></div>
+            </div>
+            <div class="skill">
+                <h3>Python</h3>
+                <div class="progress-bar"><span style="width: 95%"></span></div>
+            </div>
+        </div>
     </section>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="/images/project1.jpg" alt="Project 1" />
+                <p>Project 1: Full-Stack Web Application</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="/images/project2.jpg" alt="Project 2" />
+                <p>Project 2: Responsive Landing Page</p>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
     <footer>
-      <p>© 2024 Pragyan Pandey</p>
-      <p>Social media</p>
-      <a
-        href="https://www.facebook.com/pragyan.pandey.750"
-        target="_blank"
-        rel="noopener"
-        class="fa fa-facebook"
-        >facebook</a
-      ><br />
-      <a
-        href="https://x.com/_Pragyan_15?t=2cnhkDICnHFyTHYZCd__Qw&s=09"
-        target="_blank"
-        rel="noopener"
-        class="fa fa-twitter"
-        >twitter</a
-      >
+        <p>© 2024 Pragyan Pandey | All Rights Reserved</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/pragyan.pandey.750" target="_blank" rel="noopener" class="facebook"  aria-label="Facebook"><img src="images/facebook-logo.png" height="40px" width="40px" alt="Facebook"></a>
+            <a href="https://x.com/_Pragyan_15?t=2cnhkDICnHFyTHYZCd__Qw&s=09" target="_blank" rel="noopener" class="twitter" aria-label="Twitter"><img src="images/twitter-logo.png" height="40px" width="40px" alt="Facebook"></a>
+            <a href="https://github.com/pragyanji" target="_blank" rel="noopener" class="github" aria-label="GitHub"><img src="images/github-logo.png" height="40px" width="40px" alt="Facebook"></a>
+        </div>
     </footer>
-  </body>
+    
+    
+</body>
 </html>
