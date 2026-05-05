@@ -4,144 +4,189 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pragyan Pandey</title>
+    <meta name="description" content="Pragyan Pandey — Backend Developer specializing in Django, Python, AI/ML & Data Analysis. View my portfolio, projects, and get in touch." />
+    <title>Pragyan Pandey — Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
 </head>
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="nav-wrap">
+            <div class="logo">PP</div>
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="nav-overlay" id="nav-overlay"></div>
     </header>
 
     <section id="home">
-        <div class="intro">
-            <h1>Hi, I'm <span>Pragyan Pandey</span></h1>
-            <p>
-                Backend Developer | Django Enthusiast | AI/ML & Data Analysis
-                Passionate
-            </p>
-            <br />
-            <a href="#portfolio" class="btn">View My Work</a>
-        </div>
-        <div class="profile-pic">
-            <img src="/images/profile.png" alt="Profile Picture" />
+        <canvas id="particles"></canvas>
+        <div class="hero-wrap">
+            <div class="intro" data-animate="left">
+                <h1>Hi, I'm <span>Pragyan Pandey</span></h1>
+                <p class="tagline">Backend Developer | Django Enthusiast | AI/ML & Data Analysis Passionate</p>
+                <p class="subtitle">Final-year Computer Engineering Student · Kathmandu, Nepal</p>
+                <a href="#portfolio" class="btn">View My Work</a>
+            </div>
+            <div class="profile-pic" data-animate="right">
+                <img src="./images/profile.png" alt="Pragyan Pandey profile photo" />
+            </div>
         </div>
     </section>
 
     <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am a backend-focused developer with solid expertise in Django and
-            Python. Passionate about building robust, scalable server-side
-            applications and RESTful APIs. I'm a fast learner with a keen interest
-            in AI, Machine Learning, and Data Analysis. While I have foundational
-            frontend knowledge, my primary focus is on backend development and
-            solving complex problems. I thrive in fast-paced environments and am
-            constantly exploring emerging technologies to expand my skill set.
-        </p>
+        <h2 data-animate>About Me</h2>
+        <div class="about-card glass-panel" data-animate="scale">
+            <p>
+                Final-year Computer Engineering student with hands-on experience building full-stack web applications 
+                in Python/Django and annotating large-scale AI training datasets. Proven ability to deliver production grade 
+                features real-time video, OAuth authentication, and content moderation systems, in self-directed projects. 
+                Actively seeking a Backend Development or Data Science role to leverage technical expertise and drive impact 
+                within a collaborative, fast-paced team.
+            </p>
+        </div>
     </section>
 
+    <section id="experience">
+        <h2 data-animate>Experience</h2>
+        <div class="experience-card glass-panel" data-animate>
+            <div class="exp-header">
+                <h3>Data Annotator — CloudFactory, Remote</h3>
+                <span class="exp-date">Aug 2024 – Jan 2025</span>
+            </div>
+            <ul>
+                <li>Annotated 1,000+ 2D images for production AI/ML pipelines, consistently maintaining accuracy rates above industry benchmarks across multiple sprint cycles.</li>
+                <li>Identified and escalated edge-case data ambiguities, contributing to annotation guideline improvements adopted by the broader team.</li>
+                <li>Collaborated asynchronously with cross-functional remote teams across time zones to meet aggressive project deadlines without compromising output quality.</li>
+            </ul>
+        </div>
+    </section>
+
+
     <section id="skills">
-        <h2>Skills</h2>
+        <h2 data-animate>Skills</h2>
         <div class="skills-container">
-            <div class="skill">
-                <h3>🐍 Python</h3>
-                <div class="progress-bar">
-                    <span class="progress-fill" data-width="95"></span>
-                </div>
+            <div class="skill glass-panel" data-animate>
+                <h3><i class="devicon-python-plain"></i> Python</h3>
+                <div class="progress-bar"><span class="progress-fill" data-width="95"></span></div>
             </div>
-            <div class="skill">
-                <h3>🎯 Django</h3>
-                <div class="progress-bar">
-                    <span class="progress-fill" data-width="90"></span>
-                </div>
+            <div class="skill glass-panel" data-animate>
+                <h3><i class="devicon-django-plain"></i> Django</h3>
+                <div class="progress-bar"><span class="progress-fill" data-width="90"></span></div>
             </div>
-            <div class="skill">
-                <h3>🤖 AI/ML</h3>
-                <div class="progress-bar">
-                    <span class="progress-fill" data-width="70"></span>
-                </div>
+            <div class="skill glass-panel" data-animate>
+                <h3><i class="devicon-tensorflow-original"></i> AI/ML</h3>
+                <div class="progress-bar"><span class="progress-fill" data-width="70"></span></div>
             </div>
-            <div class="skill">
-                <h3>📊 Data Analysis</h3>
-                <div class="progress-bar">
-                    <span class="progress-fill" data-width="75"></span>
-                </div>
+            <div class="skill glass-panel" data-animate>
+                <h3><i class="devicon-pandas-plain"></i> Data Analysis</h3>
+                <div class="progress-bar"><span class="progress-fill" data-width="75"></span></div>
             </div>
-            <div class="skill">
-                <h3>🔧 REST APIs</h3>
-                <div class="progress-bar">
-                    <span class="progress-fill" data-width="85"></span>
-                </div>
+            <div class="skill glass-panel" data-animate>
+                <h3><i class="devicon-fastapi-plain"></i> REST APIs</h3>
+                <div class="progress-bar"><span class="progress-fill" data-width="85"></span></div>
             </div>
-            <div class="skill">
-                <h3>✨ Frontend Basics</h3>
-                <div class="progress-bar">
-                    <span class="progress-fill" data-width="65"></span>
-                </div>
+            <div class="skill glass-panel" data-animate>
+                <h3><i class="devicon-html5-plain"></i> Frontend Basics</h3>
+                <div class="progress-bar"><span class="progress-fill" data-width="65"></span></div>
+            </div>
+            <div class="skill glass-panel" data-animate>
+                <h3><i class="devicon-react-original"></i> React JS</h3>
+                <div class="progress-bar"><span class="progress-fill" data-width="60"></span></div>
             </div>
         </div>
     </section>
 
     <section id="portfolio">
-        <h2>Portfolio</h2>
+        <h2 data-animate>Portfolio</h2>
         <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <img src="/images/login-page.png" alt="Project 1: Signin Page" />
+            <div class="portfolio-item glass-panel" data-animate>
+                <img src="./images/ChatSphere.png" alt="ChatSphere Social Platform" />
                 <div class="project-details">
-                    <h3>Signin Signup Page</h3>
+                    <h3>ChatSphere — Social Platform</h3>
                     <p class="project-description">
-                        A responsive authentication interface built with HTML, CSS, and JavaScript. Features form validation, 
-                        password visibility toggle, and modern UI design. Demonstrates frontend best practices for user authentication flows.
+                        Real-time social platform supporting peer-to-peer video and text communication using WebRTC 
+                        with Firebase Realtime Database as the signaling layer. Features Google OAuth, gamified Aura Points 
+                        system, user ratings, daily streaks, and moderation tools.
                     </p>
-                    <p class="tech-stack"><strong>Tech:</strong> HTML5, CSS3, JavaScript</p>
-                    <a href="https://pragyanji.github.io/signin-signup-page/" rel="noopener noreferrer" target="_blank" class="project-link">Preview</a>
+                    <p class="tech-stack"><strong>Tech:</strong> Django · WebRTC · Firebase · PostgreSQL · OAuth</p>
+                    <a href="https://github.com/pragyanji/social-interaction-platform" rel="noopener noreferrer" target="_blank" class="project-link">View on GitHub</a>
                 </div>
             </div>
-            <div class="portfolio-item">
-                <img src="/images/ATM_system.png" alt="Project 2: ATM System" />
+            <div class="portfolio-item glass-panel" data-animate>
+                <img src="./images/VaultCall.png" alt="VaultCall Secure Video Chat" />
                 <div class="project-details">
-                    <h3>ATM System</h3>
+                    <h3>VaultCall — Secure Video Chat</h3>
                     <p class="project-description">
-                        A command-line ATM simulation system implementing core banking operations. Features user authentication, 
-                        balance inquiry, cash withdrawal/deposit, and transaction history. Built with secure pin validation 
-                        and account management logic.
+                        A secure, real-time video chatting application with private rooms and shareable invite links. 
+                        Features a custom galaxy-purple themed UI with animated starfield background, split-screen 
+                        video layout, glowing border effects on connection. 
+                        Built with Django and deployed on Render.
                     </p>
-                    <p class="tech-stack"><strong>Tech:</strong> C++, OOP Principles, File Handling</p>
+                    <p class="tech-stack"><strong>Tech:</strong> Django · JavaScript · WebRTC · SQLite</p>
+                    <a href="https://vaultcall.onrender.com" rel="noopener noreferrer" target="_blank" class="project-link">Preview</a>
+                </div>
+            </div>
+            <div class="portfolio-item glass-panel" data-animate>
+                <img src="./images/OTT_platform.png" alt="Nepali Saga OTT Platform" />
+                <div class="project-details">
+                    <h3>Nepali Saga — OTT Platform</h3>
+                    <p class="project-description">
+                        Fully functional OTT streaming platform enabling users to browse, subscribe, and stream content 
+                        with role-based access control. Implements subscription lifecycle management including plan upgrades, 
+                        downgrades, and renewal logic with optimized database queries.
+                    </p>
+                    <p class="tech-stack"><strong>Tech:</strong> Django · PostgreSQL · Bootstrap · JavaScript</p>
+                    <a href="https://github.com/pragyanji/OTT_Platform" rel="noopener noreferrer" target="_blank" class="project-link">View on GitHub</a>
+                </div>
+            </div>
+            <div class="portfolio-item glass-panel" data-animate>
+                <img src="./images/ATM_system.png" alt="ATM Simulation System" />
+                <div class="project-details">
+                    <h3>ATM Simulation System</h3>
+                    <p class="project-description">
+                        Console-based banking simulation supporting account creation, deposits, withdrawals, PIN management, 
+                        and OTP verification. Built with object-oriented design principles for clean separation between 
+                        account management, authentication, and audit layers.
+                    </p>
+                    <p class="tech-stack"><strong>Tech:</strong> C++ · OOP · File Handling</p>
                     <a href="https://github.com/pragyanji/ATM-system" rel="noopener noreferrer" target="_blank" class="project-link">View on GitHub</a>
                 </div>
             </div>
-            <div class="portfolio-item">
-                <img src="/images/OTT_platform.png" alt="Project 3: OTT Platform" />
+            <div class="portfolio-item glass-panel" data-animate>
+                <img src="./images/login-page.png" alt="Signin Signup Page" />
                 <div class="project-details">
-                    <h3>OTT Platform</h3>
+                    <h3>Signin Signup Page</h3>
                     <p class="project-description">
-                        A comprehensive streaming platform built with Django backend. Implements user authentication, 
-                        content management, subscription models, video streaming infrastructure, and user dashboard. 
-                        Features database optimization for scalability and RESTful API design for content delivery.
+                        A responsive authentication interface with modern UI design. Features smooth form transitions 
+                        between sign-in and sign-up views, form validation, password visibility toggle, and clean 
+                        animated interactions built with vanilla web technologies.
                     </p>
-                    <p class="tech-stack"><strong>Tech:</strong> Django, Python, SQlite, REST APIs</p>
-                    <a href="https://github.com/pragyanji/OTT_Platform" rel="noopener noreferrer"
-                        target="_blank" class="project-link">View on GitHub</a>
+                    <p class="tech-stack"><strong>Tech:</strong> HTML5 · CSS3 · JavaScript</p>
+                    <a href="https://pragyanji.github.io/signin-signup-page/" rel="noopener noreferrer" target="_blank" class="project-link">Preview</a>
                 </div>
             </div>
-            <!-- Add more projects as needed -->
         </div>
     </section>
 
     <section id="resume">
-        <h2>Resume</h2>
-        <div class="resume-container">
+        <h2 data-animate>Resume</h2>
+        <div class="resume-container glass-panel" data-animate="scale">
             <p>Download my resume to learn more about my experience, skills, and qualifications.</p>
             <a href="./resume.pdf" download class="btn btn-resume">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -155,15 +200,15 @@
     </section>
 
     <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="https://api.web3forms.com/submit" method="POST">
+        <h2 data-animate>Contact Me</h2>
+        <form action="https://api.web3forms.com/submit" method="POST" data-animate>
             <input type="hidden" name="access_key" value="73adfcfd-a13b-4fcf-bd64-a6c6d380c000" />
             <input type="text" name="name" placeholder="Your Name" required />
             <input type="email" name="email" placeholder="Your Email" required />
             <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
-        <div class="contact-info">
+        <div class="contact-info" data-animate>
             <p>Or reach out directly at:</p>
             <a href="mailto:pragyanpandey2058@gmail.com" class="email-link">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -176,37 +221,76 @@
     </section>
 
     <footer>
-        <p>© 2025 Pragyan Pandey | All Rights Reserved</p>
+        <p>© 2026 Pragyan Pandey | All Rights Reserved</p>
         <div class="social-media">
-            <a href="https://www.facebook.com/pragyanp15" target="_blank" rel="noopener noreferrer"
-                class="social-link facebook" aria-label="Facebook" title="Facebook">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                </svg>
+            <a href="https://www.facebook.com/pragyanp15" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook" title="Facebook">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             </a>
-            <a href="https://x.com/_Pragyan_15" target="_blank" rel="noopener noreferrer" class="social-link x"
-                aria-label="X" title="X">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.6l-5.1-6.72-5.85 6.72h-3.31l7.75-8.835L.424 2.25h6.74l4.6 6.06 5.48-6.06zm-1.1 19.5h1.833L7.084 4.126H5.117z" />
-                </svg>
+            <a href="https://x.com/_Pragyan_15" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X" title="X">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.6l-5.1-6.72-5.85 6.72h-3.31l7.75-8.835L.424 2.25h6.74l4.6 6.06 5.48-6.06zm-1.1 19.5h1.833L7.084 4.126H5.117z"/></svg>
             </a>
-            <a href="https://github.com/pragyanji" target="_blank" rel="noopener noreferrer" class="social-link github"
-                aria-label="GitHub" title="GitHub">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                </svg>
+            <a href="https://github.com/pragyanji" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub" title="GitHub">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             </a>
-            <a href="https://www.linkedin.com/in/pragyan-pandeyp" target="_blank" rel="noopener noreferrer"
-                class="social-link linkedin" aria-label="LinkedIn" title="LinkedIn">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.474-2.237-1.667-2.237-1.974 0-2.608 1.591-2.608 3.23v4.576h-3.554V9h3.554v1.377c.524-.824 2.069-1.909 4.986-1.909 4.687 0 5.35 3.075 5.35 7.084v5.9zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
-                </svg>
+            <a href="https://www.linkedin.com/in/pragyan-pandeyp" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn" title="LinkedIn">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.474-2.237-1.667-2.237-1.974 0-2.608 1.591-2.608 3.23v4.576h-3.554V9h3.554v1.377c.524-.824 2.069-1.909 4.986-1.909 4.687 0 5.35 3.075 5.35 7.084v5.9zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
             </a>
         </div>
     </footer>
-</body>
 
+    <script>
+    // ===== PARTICLE CANVAS =====
+    (function(){
+        const c=document.getElementById('particles');if(!c)return;
+        const ctx=c.getContext('2d');let w,h,pts=[];
+        const N=60,D=120;
+        function resize(){const s=c.parentElement;w=c.width=s.offsetWidth;h=c.height=s.offsetHeight}
+        function init(){pts=[];for(let i=0;i<N;i++)pts.push({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5,r:Math.random()*2+.5})}
+        function draw(){
+            ctx.clearRect(0,0,w,h);
+            for(let i=0;i<pts.length;i++){
+                const p=pts[i];p.x+=p.vx;p.y+=p.vy;
+                if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;
+                ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+                ctx.fillStyle='rgba(103,232,249,0.4)';ctx.fill();
+                for(let j=i+1;j<pts.length;j++){
+                    const q=pts[j],dx=p.x-q.x,dy=p.y-q.y,d=Math.sqrt(dx*dx+dy*dy);
+                    if(d<D){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);
+                    ctx.strokeStyle=`rgba(103,232,249,${.15*(1-d/D)})`;ctx.lineWidth=.5;ctx.stroke()}
+                }
+            }
+            requestAnimationFrame(draw);
+        }
+        resize();init();draw();
+        window.addEventListener('resize',()=>{resize();init()});
+    })();
+
+    // ===== SCROLL REVEAL =====
+    const obs=new IntersectionObserver(e=>{
+        e.forEach(en=>{if(en.isIntersecting){
+            en.target.classList.add('visible');
+            en.target.querySelectorAll('.progress-fill').forEach(b=>b.classList.add('animate'));
+            obs.unobserve(en.target);
+        }});
+    },{threshold:.15});
+    document.querySelectorAll('[data-animate]').forEach(el=>obs.observe(el));
+
+    // ===== MOBILE NAV =====
+    const hb=document.getElementById('hamburger-btn'),nv=document.getElementById('main-nav'),ov=document.getElementById('nav-overlay');
+    function toggle(){hb.classList.toggle('open');nv.classList.toggle('open');ov.classList.toggle('show');
+        document.body.style.overflow=nv.classList.contains('open')?'hidden':''}
+    hb.addEventListener('click',toggle);ov.addEventListener('click',toggle);
+    nv.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{if(nv.classList.contains('open'))toggle()}));
+
+    // ===== ACTIVE NAV =====
+    const secs=document.querySelectorAll('section[id]'),links=document.querySelectorAll('nav ul li a');
+    new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){
+        links.forEach(l=>l.classList.remove('active'));
+        const a=document.querySelector(`nav a[href="#${en.target.id}"]`);if(a)a.classList.add('active');
+    }})},{threshold:.3}).observe&&secs.forEach(s=>new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){
+        links.forEach(l=>l.classList.remove('active'));
+        const a=document.querySelector(`nav a[href="#${en.target.id}"]`);if(a)a.classList.add('active');
+    }})},{threshold:.3}).observe(s));
+    </script>
+</body>
 </html>
