@@ -5,12 +5,10 @@
   --glass-border: rgba(255,255,255,0.15);
   --glass-border-hover: rgba(255,255,255,0.3);
   --glass-blur: blur(24px);
-  --glass-shine: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.05) 100%);
   --accent-1: #7dd3fc;
   --accent-2: #c084fc;
   --accent-3: #67e8f9;
   --accent-grad: linear-gradient(135deg, var(--accent-3), var(--accent-1), var(--accent-2));
-  --iridescent: linear-gradient(135deg, #67e8f9, #7dd3fc, #c084fc, #f0abfc, #67e8f9);
   --bg-dark: #030712;
   --text-primary: #f1f5f9;
   --text-secondary: #94a3b8;
@@ -322,27 +320,43 @@ section>h2{
 
 /* ===== RESUME ===== */
 #resume{text-align:center}
-.resume-container{
-  max-width:600px;margin:0 auto;padding:48px 40px;
+#resume .resume-certificates-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
+  gap:32px;max-width:1200px;margin:0 auto;
+}
+.resume-card{
+  padding:48px 40px;
   display:flex;flex-direction:column;align-items:center;gap:24px;
 }
-.resume-container p{font-size:1.05rem;color:var(--text-secondary);line-height:1.8;position:relative;z-index:1}
+.resume-card h3{
+  font-size:1.4rem;font-weight:700;
+  background:var(--accent-grad);-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;background-clip:text;
+}
+.resume-card p{font-size:1.05rem;color:var(--text-secondary);line-height:1.8;position:relative;z-index:1}
+.card-actions{
+  display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-bottom:8px;
+}
 .btn-resume{
-  display:inline-flex;align-items:center;gap:10px;
-  padding:14px 40px;background:var(--accent-grad);color:var(--bg-dark);
-  text-decoration:none;border-radius:50px;font-weight:600;
-  transition:var(--transition);box-shadow:0 8px 30px rgba(103,232,249,0.25);
-  border:none;position:relative;overflow:hidden;
+  gap:10px;
+  padding:14px 40px;
 }
-.btn-resume::before{
-  content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent);
-  transition:left .5s ease;
-}
-.btn-resume:hover::before{left:100%}
-.btn-resume:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(103,232,249,0.35)}
 .btn-resume svg{stroke:var(--bg-dark);transition:transform .3s ease}
 .btn-resume:hover svg{transform:translateY(2px)}
+
+.btn-resume.btn-outline{
+  background:transparent;color:var(--text-primary);
+  border:1.5px solid var(--glass-border);box-shadow:none;
+}
+.btn-resume.btn-outline::before{display:none}
+.btn-resume.btn-outline svg{stroke:var(--text-primary)}
+.btn-resume.btn-outline:hover{
+  background:var(--glass-bg-strong);border-color:var(--glass-border-hover);
+  box-shadow:0 8px 30px rgba(103,232,249,0.15);
+}
+.btn-resume.btn-outline:hover svg{stroke:var(--accent-1);transform:translateY(2px)}
+
+
 
 /* ===== CONTACT ===== */
 #contact{text-align:center}
@@ -363,20 +377,9 @@ input:focus,textarea:focus{
   background:rgba(255,255,255,0.08);
 }
 textarea{resize:none;height:150px}
-button[type="submit"]{
-  background:var(--accent-grad);color:var(--bg-dark);
-  padding:14px 40px;border:none;border-radius:50px;cursor:pointer;
-  font-size:1.05rem;font-weight:600;transition:var(--transition);
-  margin-top:16px;box-shadow:0 8px 25px rgba(103,232,249,0.25);
-  position:relative;overflow:hidden;
+form button[type="submit"]{
+  margin-top:16px;
 }
-button[type="submit"]::before{
-  content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent);
-  transition:left .5s ease;
-}
-button[type="submit"]:hover::before{left:100%}
-button[type="submit"]:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(103,232,249,0.35)}
 .contact-info{margin-top:40px;padding-top:40px;border-top:1px solid var(--glass-border)}
 .contact-info p{font-size:1.05rem;color:var(--text-secondary);margin-bottom:16px}
 .email-link{
@@ -428,7 +431,7 @@ footer p{font-size:.9rem;color:var(--text-secondary)}
 /* ===== RESPONSIVE: TABLET ===== */
 @media(max-width:1024px){
   #home .hero-wrap{flex-direction:column;text-align:center;gap:40px}
-  .intro p,.intro .tagline{margin-left:auto;margin-right:auto}
+  .intro p{margin-left:auto;margin-right:auto}
   .profile-pic{order:-1}
   .experience-card .exp-header{flex-direction:column}
 }
@@ -459,7 +462,8 @@ footer p{font-size:.9rem;color:var(--text-secondary)}
   .skill{padding:22px}
   #portfolio .portfolio-grid{grid-template-columns:1fr;gap:20px}
   .portfolio-item img{height:200px}
-  .resume-container{padding:28px 20px}
+  .resume-card{padding:28px 20px}
+
   input,textarea{font-size:16px}
   .social-link{width:46px;height:46px}
   .social-link svg{width:20px;height:20px}
