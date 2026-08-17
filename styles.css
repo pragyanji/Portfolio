@@ -323,10 +323,13 @@ section>h2{
 /* ===== RESUME ===== */
 #resume{text-align:center}
 .resume-container{
-  max-width:600px;margin:0 auto;padding:48px 40px;
+  max-width:850px;margin:0 auto;padding:48px 40px;
   display:flex;flex-direction:column;align-items:center;gap:24px;
 }
 .resume-container p{font-size:1.05rem;color:var(--text-secondary);line-height:1.8;position:relative;z-index:1}
+.resume-actions{
+  display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-bottom:8px;
+}
 .btn-resume{
   display:inline-flex;align-items:center;gap:10px;
   padding:14px 40px;background:var(--accent-grad);color:var(--bg-dark);
@@ -343,6 +346,35 @@ section>h2{
 .btn-resume:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(103,232,249,0.35)}
 .btn-resume svg{stroke:var(--bg-dark);transition:transform .3s ease}
 .btn-resume:hover svg{transform:translateY(2px)}
+
+.btn-resume.btn-outline{
+  background:transparent;color:var(--text-primary);
+  border:1.5px solid var(--glass-border);box-shadow:none;
+}
+.btn-resume.btn-outline::before{display:none}
+.btn-resume.btn-outline svg{stroke:var(--text-primary)}
+.btn-resume.btn-outline:hover{
+  background:var(--glass-bg-strong);border-color:var(--glass-border-hover);
+  box-shadow:0 8px 30px rgba(103,232,249,0.15);
+}
+.btn-resume.btn-outline:hover svg{stroke:var(--accent-1);transform:translateY(2px)}
+
+.resume-iframe-container{
+  display:none;
+  width:100%;height:750px;border-radius:var(--radius-md);overflow:hidden;
+  border:1px solid var(--glass-border);box-shadow:0 10px 40px rgba(0,0,0,0.3);
+  margin-top:24px;background:rgba(255,255,255,0.02);
+}
+.resume-iframe-container.show{
+  display:block;
+  animation:resumeFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.resume-iframe-container iframe{width:100%;height:100%;border:none}
+
+@keyframes resumeFadeIn{
+  from{opacity:0;transform:translateY(15px)}
+  to{opacity:1;transform:translateY(0)}
+}
 
 /* ===== CONTACT ===== */
 #contact{text-align:center}
@@ -460,6 +492,7 @@ footer p{font-size:.9rem;color:var(--text-secondary)}
   #portfolio .portfolio-grid{grid-template-columns:1fr;gap:20px}
   .portfolio-item img{height:200px}
   .resume-container{padding:28px 20px}
+  .resume-iframe-container{display:none}
   input,textarea{font-size:16px}
   .social-link{width:46px;height:46px}
   .social-link svg{width:20px;height:20px}

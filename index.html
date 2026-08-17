@@ -199,15 +199,27 @@
     <section id="resume">
         <h2 data-animate>Resume</h2>
         <div class="resume-container glass-panel" data-animate="scale">
-            <p>Download my resume to learn more about my experience, skills, and qualifications.</p>
-            <a href="./resume.pdf" download class="btn btn-resume">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                    <polyline points="7 10 12 15 17 10"></polyline>
-                    <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
-                Download Resume
-            </a>
+            <p>View my resume directly in your browser or download it for offline viewing.</p>
+            <div class="resume-actions">
+                <a href="./resume.pdf" target="_blank" class="btn btn-resume" id="view-resume-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                    View Resume
+                </a>
+                <a href="./resume.pdf" download class="btn btn-resume btn-outline">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download Resume
+                </a>
+            </div>
+            <div class="resume-iframe-container" id="resume-viewer">
+                <iframe src="./resume.pdf#toolbar=0" title="Pragyan Pandey Resume Preview"></iframe>
+            </div>
         </div>
     </section>
 
@@ -303,6 +315,40 @@
         links.forEach(l=>l.classList.remove('active'));
         const a=document.querySelector(`nav a[href="#${en.target.id}"]`);if(a)a.classList.add('active');
     }})},{threshold:.3}).observe(s));
+
+    // ===== RESUME PREVIEW TOGGLE =====
+    (function(){
+        const viewBtn = document.getElementById('view-resume-btn');
+        const resumeContainer = document.getElementById('resume-viewer');
+        if (viewBtn && resumeContainer) {
+            viewBtn.addEventListener('click', (e) => {
+                if (window.innerWidth >= 768) {
+                    e.preventDefault();
+                    const isShown = resumeContainer.classList.toggle('show');
+                    if (isShown) {
+                        viewBtn.innerHTML = `
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                            Hide Preview
+                        `;
+                        setTimeout(() => {
+                            resumeContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        }, 100);
+                    } else {
+                        viewBtn.innerHTML = `
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            View Resume
+                        `;
+                    }
+                }
+            });
+        }
+    })();
     </script>
 </body>
 </html>
